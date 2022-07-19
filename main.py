@@ -2,7 +2,6 @@ import shutil
 import os
 import datetime
 
-# my_path = 'C:\\Users\\admin\\Desktop\\C1'
 date = str(datetime.date.today())
 
 print(date)
@@ -59,11 +58,14 @@ def renamer(prefix):
     for iterator in func_folder:
         if iterator not in dirs and not iterator.startswith(prefix):
             shutil.move(my_path + '\\' + iterator, (my_path + '\\' + prefix + ' ' + iterator))
-
+        else:
+            pass
 
 create_folders()
+
 if rename == 1:
     renamer(date)
 else:
     renamer(rename)
+
 classification()
